@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Snippets</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<!--
+
+
+
+	Tutorial Como Crear y Utilizar Snippets en VS Code [5/5]
+    	https://www.youtube.com/watch?v=N8hbZVUJ6BY
+
+		
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Snippets
+________
+
+	_los snippets, son fragmentos de código que podemos desarrollar para hacer el proceso de programación mucho más rápido al disponer de bloques de código de forma pre construida y a la mano a través, de un comando
+
+
+Activar Snipper en VS Code
+__________________________
+
+	_para lo cuál, primeramente debemos de ir al engranaje dentado de la parte inferior izquierda de la aplicación visual studio code, y entrar allí, y seleccionar la opción de "User Snippets"
+	
+	_para que así, se nos abra el "package control", para que así, a través, del cuál, podremos indicar el tipo de lenguaje en el cuál, deseamos crear nuevos snippet
+	
+	_como también, podremos acceder directamente al "package control", a través, del shortcut, "Control + Shift + P", y una vez allí, tipear "Snippet"
+
+	_para que así, nos aparezca la opción de 
+	
+		_"Preferences: Configure User snippets"
+
+	_la cuál, debemos de seleccionar
+
+	_de ésta manera, por ejemplo podremos seleccionar "html", y darle ha "enter", para que así, se abra un archivo llamado en éste caso "html.json", en el cuál, pdoremos crear los snippets, deseados respectivamente
+
+
+
+Crear un Snippet
+________________
+
+	_para crear un snippet, ya estando en el archivo .json, respectivo debemos de crear una estructura con las siguientes características, ejemplo;
+
+		
+		_"encabezado", corresponde a un nuevo objeto javascript, y a el nombre general del snippet, dentro del archivo .json
+
+		_"prefix", corresponde con texto de acceso directo a través, del cuál, accederemos al snippet, respectivo
+
+		_"body", corresponde al bloque de código ha ejecutar ó cargar
+
+		_"description": corresponde a una descripción para a la hora de llamar el shortcut, tener una descripción escrita y más detallada (OPCIONAL)
+
+		_"$1", hará que el cursor aparezca en ese punto del bloque de código, más también, podríamos agregar más cursores consecutivos en otras partes del bloque de código, ej: "$2", de ésta manera, una vez hayamos escrito en el primer cursor podremos pulsar "tab", para saltar al siguiente cursor y seguir escribiendo en ese punto
+-->
+
+
+	<!--ejemplo para snippet, sin identación-->
+	"encabezado":{
+		"prefix": "-encabezado",
+		"body": "<h1>$1 texto $2</h1>",
+		"description": "encabezado html"
+	}
+
+	<!--ejemplo de snippet, con identación y de más de una línea-->
+		<!--
+		_"body":[], para snippets, con identación y de más de una línea, debemos de crear un arreglo ó matriz simple de javascript
+		
+		_más para crear la identación entre los elemento hijos ó en cascada debemos de utiliza "\t", precediendo al elemento respectivo
+		-->
+	"formulario":{
+		"prefix": "-formulario",
+		"body":[
+			"<form action='$1' method='$2' name='$3'>",
+			"\t<input type='text' placeholder='$4'>",
+			"\t<input type='submit' value='$5'>",
+			"</form>"
+		],
+		"description": "Formulatio html"
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
