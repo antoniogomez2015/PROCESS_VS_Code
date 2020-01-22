@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Snippets</title>
+</head>
+<body>
+	
+</body>
+</html>
+
+<!--
+
+
+    Crear un Snippet
+    ________________
+
+	_para crear un snippet, ya estando en el archivo .json, respectivo que hemos creado previamente, debemos de crear una estructura con las siguientes características, ejemplo;
+
+		
+        encabezado 
+        
+            corresponde a un nuevo objeto javascript, y a el nombre general del snippet, dentro del archivo .json
+
+
+        prefix 
+        
+            corresponde con el texto de acceso directo a través, del cuál, accederemos al snippet, respectivo
+
+
+        body 
+        
+            corresponde al bloque de código ha ejecutar ó cargar
+
+
+        description 
+        
+            corresponde a una descripción para a la hora de llamar el shortcut, de ésta manera, tendremos una descripción escrita y más detallada (OPCIONAL)
+
+
+        $1 
+        
+            hará que el cursor aparezca en ese punto del bloque de código, más también, podríamos agregar más cursores consecutivos en otras partes del bloque de código 
+            
+            
+            ej: "$2", de ésta manera, una vez hayamos escrito en el primer cursor podremos pulsar "tab", para saltar al siguiente cursor y seguir escribiendo en ese punto
+        
+-->
+
+
+	<!--ejemplo para snippet, sin identación-->
+	"encabezado":{
+		"prefix": "-encabezado",
+		"body": "<h1>$1 texto $2</h1>",
+		"description": "encabezado html"
+	}
+
+    <!--ejemplo de snippet, con identación y de más de una línea-->
+    
+		<!--
+		_"body":[], para snippets, con identación y de más de una línea, debemos de crear un arreglo ó matriz simple de javascript
+		
+		_más para crear la identación entre los elemento hijos ó en cascada debemos de utiliza "\t", precediendo al elemento respectivo
+        -->
+        
+	"formulario":{
+		"prefix": "-formulario",
+		"body":[
+			"<form action='$1' method='$2' name='$3'>",
+			"\t<input type='text' placeholder='$4'>",
+			"\t<input type='submit' value='$5'>",
+			"</form>"
+		],
+		"description": "Formulatio html"
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
